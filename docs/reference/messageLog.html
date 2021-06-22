@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="https://centerforassessment.github.io/assets/favicon.png" sizes="16x16">
 
-<meta property="og:title" content="cfaTools • Change log"/>
-<meta property="og:description" content="cfaTools • Change log"/>
+<meta property="og:title" content="cfaTools • A function for creating customized log reports and saving message info. — messageLog"/>
+<meta property="og:description" content="cfaTools • A function for creating customized log reports and saving message info. — messageLog"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://centerforassessment.github.io/cfaTools"/>
 <meta property="og:image" content="https://centerforassessment.github.io/assets/favicon.png"/>
@@ -17,10 +17,10 @@
 <meta name="twitter:site" content="@NCIEA1"/>
 <meta name="twitter:creator" content="@dbetebenner"/>
 <meta name="twitter:image" content="https://centerforassessment.github.io/assets/favicon.png"/>
-<meta name="twitter:title" content="cfaTools • Change log"/>
-<meta name="twitter:description" content="cfaTools • Change log"/>
+<meta name="twitter:title" content="cfaTools • A function for creating customized log reports and saving message info. — messageLog"/>
+<meta name="twitter:description" content="cfaTools • A function for creating customized log reports and saving message info. — messageLog"/>
 
-<title>cfaTools • Change log</title>
+<title>cfaTools • A function for creating customized log reports and saving message info. — messageLog</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -54,7 +54,7 @@
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -133,96 +133,65 @@
       </header>
 
       <div class="row">
-
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Change log <small>All releases</small></h1>
+    <h1>A function for creating customized log reports and saving message info.</h1>
     </div>
 
-    <div class="contents">
-    <div id="cfatools-00-099" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-099" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.99</h1>
-<ul>
-<li>Adding scale score amputation and imputation functions</li>
-</ul>
-</div>
-    <div id="cfatools-00-097" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-097" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.97</h1>
-<ul>
-<li>Adding draft function computeHoMetric2 and vignette</li>
-</ul>
-</div>
-    <div id="cfatools-00-07" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-07" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.7</h1>
-<ul>
-<li>Getting GitHub workflows working for R-CMD check and adding toOrdinal dependency</li>
-</ul>
-</div>
-    <div id="cfatools-00-06" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-06" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.6</h1>
-<ul>
-<li>Update of documentation</li>
-</ul>
-</div>
-    <div id="cfatools-00-05" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-05" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.5</h1>
-<ul>
-<li>Fixing documentation and other minor updates for bootstrapSRS testing</li>
-</ul>
-</div>
-    <div id="cfatools-00-04" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-04" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.4</h1>
-<ul>
-<li>Adding initial version of bootstrapSRS function to package.</li>
-</ul>
-</div>
-    <div id="cfatools-00-03" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-03" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.3</h1>
-<ul>
-<li>Small fixes to packagePages to build package website.</li>
-</ul>
-</div>
-    <div id="cfatools-00-02" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-02" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.2</h1>
-<ul>
-<li>Minor updates to cfaGaps function.</li>
-</ul>
-</div>
-    <div id="cfatools-00-01" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-01" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.1</h1>
-<ul>
-<li>Package Released with initial function supporting analysis of gaps (including achievement gaps).</li>
-</ul>
-</div>
-    </div>
+    <p>Function produces a text file (custom message log).</p>
+
+    <pre class="usage"><span class='fu'>messageLog</span>(
+  <span class='no'>log.message</span>,
+        <span class='kw'>log.directory</span> <span class='kw'>=</span> <span class='st'>"Logs"</span>,
+        <span class='kw'>logfile</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+        <span class='kw'>add.date</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+        <span class='kw'>appendLF</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>log.message</th>
+      <td><p>Text string to be exported to a text file log.</p></td>
+    </tr>
+    <tr>
+      <th>log.directory</th>
+      <td><p>File path where log file should be saved.</p></td>
+    </tr>
+    <tr>
+      <th>logfile</th>
+      <td><p>Name of file to be saved.  If NULL, then file will be named as
+  <code>messageLog_*DATE*.txt</code>, where <code>*DATE*</code> is the current date.</p></td>
+    </tr>
+    <tr>
+      <th>add.date</th>
+      <td><p>TRUE. Adds the date to a user provided (non-NULL) <code>logfile</code> name.</p></td>
+    </tr>
+    <tr>
+      <th>appendLF</th>
+      <td><p>TRUE. Adds log message to a file (if it already exists).</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Creates (or adds to) a log file with the text given in the "log.message" argument.</p>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A text file with name provided in "logfile", saved in the "log.directory".</p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#cfatools-00-099">0.0-0.99</a></li>
-        <li><a href="#cfatools-00-097">0.0-0.97</a></li>
-        <li><a href="#cfatools-00-07">0.0-0.7</a></li>
-        <li><a href="#cfatools-00-06">0.0-0.6</a></li>
-        <li><a href="#cfatools-00-05">0.0-0.5</a></li>
-        <li><a href="#cfatools-00-04">0.0-0.4</a></li>
-        <li><a href="#cfatools-00-03">0.0-0.3</a></li>
-        <li><a href="#cfatools-00-02">0.0-0.2</a></li>
-        <li><a href="#cfatools-00-01">0.0-0.1</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#value">Value</a></li>
+    </ul>
 
+    <h2>Author</h2>
+    Adam R. Van Iwaarden <a href='mailto:avaniwaarden@nciea.org'>avaniwaarden@nciea.org</a> 
+  </div>
 </div>
 
       <footer>

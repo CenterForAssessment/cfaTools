@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="https://centerforassessment.github.io/assets/favicon.png" sizes="16x16">
 
-<meta property="og:title" content="cfaTools • Change log"/>
-<meta property="og:description" content="cfaTools • Change log"/>
+<meta property="og:title" content="cfaTools • A function for pooling imputed scale scores, SGPs and Baseline SGPs — imputationSummary"/>
+<meta property="og:description" content="cfaTools • A function for pooling imputed scale scores, SGPs and Baseline SGPs — imputationSummary"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://centerforassessment.github.io/cfaTools"/>
 <meta property="og:image" content="https://centerforassessment.github.io/assets/favicon.png"/>
@@ -17,10 +17,10 @@
 <meta name="twitter:site" content="@NCIEA1"/>
 <meta name="twitter:creator" content="@dbetebenner"/>
 <meta name="twitter:image" content="https://centerforassessment.github.io/assets/favicon.png"/>
-<meta name="twitter:title" content="cfaTools • Change log"/>
-<meta name="twitter:description" content="cfaTools • Change log"/>
+<meta name="twitter:title" content="cfaTools • A function for pooling imputed scale scores, SGPs and Baseline SGPs — imputationSummary"/>
+<meta name="twitter:description" content="cfaTools • A function for pooling imputed scale scores, SGPs and Baseline SGPs — imputationSummary"/>
 
-<title>cfaTools • Change log</title>
+<title>cfaTools • A function for pooling imputed scale scores, SGPs and Baseline SGPs — imputationSummary</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -54,7 +54,7 @@
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -133,96 +133,72 @@
       </header>
 
       <div class="row">
-
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Change log <small>All releases</small></h1>
+    <h1>A function for pooling imputed scale scores, SGPs and Baseline SGPs</h1>
     </div>
 
-    <div class="contents">
-    <div id="cfatools-00-099" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-099" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.99</h1>
-<ul>
-<li>Adding scale score amputation and imputation functions</li>
-</ul>
-</div>
-    <div id="cfatools-00-097" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-097" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.97</h1>
-<ul>
-<li>Adding draft function computeHoMetric2 and vignette</li>
-</ul>
-</div>
-    <div id="cfatools-00-07" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-07" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.7</h1>
-<ul>
-<li>Getting GitHub workflows working for R-CMD check and adding toOrdinal dependency</li>
-</ul>
-</div>
-    <div id="cfatools-00-06" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-06" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.6</h1>
-<ul>
-<li>Update of documentation</li>
-</ul>
-</div>
-    <div id="cfatools-00-05" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-05" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.5</h1>
-<ul>
-<li>Fixing documentation and other minor updates for bootstrapSRS testing</li>
-</ul>
-</div>
-    <div id="cfatools-00-04" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-04" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.4</h1>
-<ul>
-<li>Adding initial version of bootstrapSRS function to package.</li>
-</ul>
-</div>
-    <div id="cfatools-00-03" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-03" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.3</h1>
-<ul>
-<li>Small fixes to packagePages to build package website.</li>
-</ul>
-</div>
-    <div id="cfatools-00-02" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-02" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.2</h1>
-<ul>
-<li>Minor updates to cfaGaps function.</li>
-</ul>
-</div>
-    <div id="cfatools-00-01" class="section level1">
-<h1 class="hasAnchor">
-<a href="#cfatools-00-01" class="anchor" aria-hidden="true"></a>cfaTools 0.0-0.1</h1>
-<ul>
-<li>Package Released with initial function supporting analysis of gaps (including achievement gaps).</li>
-</ul>
-</div>
-    </div>
+    <p>Function produces summary tables and multiple imputation statistics
+for imputed score data and SGP analyses.</p>
+
+    <pre class="usage"><span class='fu'>imputationSummary</span>(
+  <span class='no'>data.to.summarize</span>,
+  <span class='kw'>institution.level</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>summary.level</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>standardize.scores</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>data.to.summarize</th>
+      <td><p>An dataset of imputed scale scores and SGPs (cohort and
+  baseline referenced) calculated using those imputed scores.</p></td>
+    </tr>
+    <tr>
+      <th>institution.level</th>
+      <td><p>Institution ID for summary table aggregation. E.g.,
+  "SCHOOL_NUMBER" or "DISTRICT_NUMBER". <code>NULL</code> (default) aggregates across
+  all students (entire state).</p></td>
+    </tr>
+    <tr>
+      <th>summary.level</th>
+      <td><p>Additional aggregation levels. E.g., "GRADE" and/or "CONTENT_AREA".</p></td>
+    </tr>
+    <tr>
+      <th>standardize.scores</th>
+      <td><p>If not <code>NULL</code> (default), then level by which Scale
+  scores are standardized (by mean and SD of the observed scores). E.g., "GRADE"
+  to standardize by grade for cross grade comparisons.</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Produces summary tables and multiple imputation statistics. Function assumes
+data contains variables named "SCALE_SCORE_OBSERVED", "SGP_OBSERVED", and "SGP_BASELINE_OBSERVED"
+for the unaltered (missing) data, and imputed/imputation derived variables with the
+tag <code>_IMPUTED_</code> added. For example, "SCALE_SCORE_IMPUTED_1", "SGP_IMPUTED_1", and
+"SGP_BASELINE_IMPUTED_1". That is, the data is in a wide format (not stacked by imputation).</p>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Function returns a list including a summary table disaggregated by the requested factors
+and a table including the overall mean differences and correlations between the observed
+and (averaged/pooled) imputed values (i.e. mean SGPs and scale scores). The summary table
+includes several statistics derived for the evaluation of multiple imputation analyses.</p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#cfatools-00-099">0.0-0.99</a></li>
-        <li><a href="#cfatools-00-097">0.0-0.97</a></li>
-        <li><a href="#cfatools-00-07">0.0-0.7</a></li>
-        <li><a href="#cfatools-00-06">0.0-0.6</a></li>
-        <li><a href="#cfatools-00-05">0.0-0.5</a></li>
-        <li><a href="#cfatools-00-04">0.0-0.4</a></li>
-        <li><a href="#cfatools-00-03">0.0-0.3</a></li>
-        <li><a href="#cfatools-00-02">0.0-0.2</a></li>
-        <li><a href="#cfatools-00-01">0.0-0.1</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#value">Value</a></li>
+    </ul>
 
+    <h2>Author</h2>
+    Adam R. Van Iwaarden <a href='mailto:avaniwaarden@nciea.org'>avaniwaarden@nciea.org</a> 
+  </div>
 </div>
 
       <footer>
